@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            height: 100px;
+            width: 100px;
+            margin: 5px;
+            padding: 10px;
+            border: 2px dotted red;
+            background-color: blue;
+        }
+        #button{
+            height: 50px;
+            width: 50px;
+            padding: 10px 15px;
+            margin: 100px;
+            border: 2px dotted red;
+            border-radius: 62px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" style="box-sizing: content-box;">Box 1</div>
+    <div class="box" style="box-sizing: border-box;">Box 2</div>
+    <button id="button">click me</button>
+</body>
+</html>
