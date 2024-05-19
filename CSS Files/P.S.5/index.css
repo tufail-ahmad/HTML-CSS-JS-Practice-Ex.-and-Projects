@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    padding-top: 3px;
+}
+nav a {
+    text-decoration: none;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 15px;
+}
+header {
+    background-color: aqua;
+    height: 25px;
+}
+#second {
+    height: 50px;
+    width: 50px;
+    background-color: cadetblue;
+    border-radius: 50%;
+}
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    margin: 5px;
+    display: inline-block;
+}
+#container {
+    border: 3px solid black;
+    margin: 5px;
+}
+#box2 {
+    z-index: 2;
+    position: absolute;
+    left: 25px;
+}
+#box4 {
+    position: fixed;
+    right: 10px;
+}
+footer{
+    position: fixed;
+    bottom: 0px;
+    background-color: darkgrey;
+}
+.boox {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    margin: 5px;
+}
