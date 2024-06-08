@@ -1,2 +1,2 @@
-This is my HTML Practice Codes <br>
+This is my HTML, CSS & JS  Practice Ex. and Projects. <br>
 Author: Tufail Ahmad
