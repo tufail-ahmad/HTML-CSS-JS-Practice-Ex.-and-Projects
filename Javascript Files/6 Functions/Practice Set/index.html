@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Functions</title>
+</head>
+
+<body>
+  <script>
+    function isOdd(number) {
+      let rem = number % 2;
+      let isOdd = rem == 1;
+      return isOdd;
+    }
+
+    // console.log(isOdd(5));
+    // console.log(isOdd(4));
+    // console.log(isOdd(0));
+    // console.log(isOdd(4567));
+    // console.log(isOdd(98476));
+
+    function larger(num1, num2) {
+      // if (num1 > num2) {
+      //   return num1;
+      // } else {
+      //   return num2;
+      // }
+      return num1 > num2 ? num1 : num2;
+    }
+
+    // console.log(larger(5, 7));
+    // console.log(larger(56, 47));
+    // console.log(larger(545, 677));
+    // console.log(larger(235, 457));
+
+    function getFarenheit(celcius) {
+      let result = (9 / 5) * celcius + 32;
+      return result;
+    }
+
+    console.log(getFarenheit(50));
+    console.log(getFarenheit(100));
+    console.log(getFarenheit(60));
+    console.log(getFarenheit(35));
+  </script>
+</body>
+
+</html>
