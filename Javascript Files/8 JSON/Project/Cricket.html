@@ -2,32 +2,33 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>Cricket Game</title>
-  <style>
-    body {
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="Cricket.css">
 </head>
 
 <body>
   <h1>Bad Ball Stump Game</h1>
-  <button onclick="
+
+  <button class="my-button" onclick="
     let computerChoice = generateComputerChoice();
     let resultMsg = getResult('Bat', computerChoice);
-    displayResult('Bat', computerChoice, resultMsg);">Bat
+    displayResult('Bat', computerChoice, resultMsg);"><img src="images/bat.png" alt="Bat Image" class="choice-image">
   </button>
 
-  <button onclick="
+  <button class="my-button" onclick="
     computerChoice = generateComputerChoice();
     resultMsg = getResult('Ball', computerChoice);
-    displayResult('Ball', computerChoice, resultMsg);">Ball
+    displayResult('Ball', computerChoice, resultMsg);"><img src="images/ball.png" alt="Ball Image"
+      class="choice-image">
   </button>
 
-  <button onclick="
+  <button class="my-button" onclick="
     computerChoice = generateComputerChoice();
     resultMsg = getResult('Stump', computerChoice);
-    displayResult('Stump', computerChoice, resultMsg);">Stump
+    displayResult('Stump', computerChoice, resultMsg);"><img src="images/stump.png" alt="Stump Image"
+      class="choice-image">
   </button>
 
   <h3 id="user-move"></h3>
@@ -35,9 +36,12 @@
   <h3 id="result"></h3>
   <h3 id="score"></h3>
 
-  <button onclick="localStorage.clear()
+  <button class="reset-button" onclick="localStorage.clear()
     resetScore();
-  ">Reset</button>
+    "><span class="material-symbols-outlined">
+      replay
+    </span>
+  </button>
 
   <script>
     let scoreStr = localStorage.getItem('score');
@@ -110,9 +114,13 @@
 
     function displayResult(userMove, computerMove, result) {
       localStorage.setItem('score', JSON.stringify(score));
-      document.querySelector('#user-move').innerText = (userMove !== undefined) ? `You have choosen ${userMove}` : '';
-      document.querySelector('#computer-move').innerText = (computerMove !== undefined) ? `Computer has choosen ${computerMove}` : '';
-      document.querySelector('#result').innerText = (result !== undefined) ? result : '';
+
+      document.querySelector('#user-move').innerText = userMove ? `You have choosen ${userMove}` : '';
+
+      document.querySelector('#computer-move').innerText = computerMove ? `Computer has choosen ${computerMove}` : '';
+
+      document.querySelector('#result').innerText = result || '';
+
       document.querySelector('#score').innerText = score.displayScore();
 
     }
