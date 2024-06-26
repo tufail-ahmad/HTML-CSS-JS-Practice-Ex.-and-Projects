@@ -29,6 +29,12 @@
     resultMsg = getResult('Stump', computerChoice);
     displayResult('Stump', computerChoice, resultMsg);">Stump
   </button>
+
+  <h3 id="user-move"></h3>
+  <h3 id="computer-move"></h3>
+  <h3 id="result"></h3>
+  <h3 id="score"></h3>
+
   <button onclick="localStorage.clear()
     resetScore();
   ">Reset</button>
@@ -46,8 +52,10 @@
       }
 
       score.displayScore = function () {
-        return `No. of matches Won:${score.win}, Lost: ${score.lost}, Tie: ${score.tie}`;
+        return `Score: Won: ${score.win}, Lost: ${score.lost}, Tie: ${score.tie}`;
       }
+
+      displayResult();
     }
 
 
@@ -102,11 +110,11 @@
 
     function displayResult(userMove, computerMove, result) {
       localStorage.setItem('score', JSON.stringify(score));
-      alert(`You have choosen ${userMove}, Computer has choosen ${computerMove}
+      document.querySelector('#user-move').innerText = (userMove !== undefined) ? `You have choosen ${userMove}` : '';
+      document.querySelector('#computer-move').innerText = (computerMove !== undefined) ? `Computer has choosen ${computerMove}` : '';
+      document.querySelector('#result').innerText = (result !== undefined) ? result : '';
+      document.querySelector('#score').innerText = score.displayScore();
 
-       ${result}
-
-      ${score.displayScore()}`)
     }
   </script>
 </body>
