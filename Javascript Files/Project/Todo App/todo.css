@@ -1,0 +1,63 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  margin: 30px;
+  background-color: aqua;
+}
+#main-heading {
+  color: rgba(241, 159, 5, 0.936);
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Times New Roman", Times, serif;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 160px;
+  background: linear-gradient(200deg, rgb(0, 0, 255), rgb(174, 99, 199));
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 180px 150px 100px;
+  column-gap: 9px;
+  row-gap: 5px;
+  margin-top: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.delete-btn {
+  background-color: rgb(125, 11, 11);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 0;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.add-button {
+  background-color: rgb(10, 172, 53);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 11px 0;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 15px;
+}
+#todo-input {
+  font-size: 15px;
+  padding: 13px 7px;
+  border-radius: 10px;
+  margin-top: 15px;
+  border: none;
+}
+#todo-date {
+  font-size: 15px;
+  padding: 11px 7px;
+  border-radius: 10px;
+  margin-top: 15px;
+  border: none;
+}
+.my-span {
+  text-align: left;
+}
